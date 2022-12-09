@@ -23,3 +23,21 @@ git status -> ktra trạng thái các file/thư mục
 git add manhnv.txt -> thêm file để git theo dõi
 git commit -m "manhnv first commit" -> cam kết lại các
 thay đổi vừa git add
+
+- quy tắc 3 bước để đẩy code:
+git add
+git commit
+git push
+
+- LẤy source code từ git của người khác về máy:
+ git clone https://github.com/nguyenvietmanhit/php1222e_skda.git
+
+ 2 - Code teamwork với Git
+ Bài toán: Lớp PHP1222E là 1 team code, manhnv là PM, còn
+ lại là dev
+ + PM khởi code cho dự án ở dạng private
+ + PM add thủ công các member vào dự án: SEttings -> 
+ Collaborator -> Add people
+ + Các member sau khi đc add cần vào email để accept invite để đc join vào dự án
+ + Member cần clone source về trước, r cd vào thư mục đó
+ 
