@@ -38,6 +38,27 @@ git push
  + PM khởi code cho dự án ở dạng private
  + PM add thủ công các member vào dự án: SEttings -> 
  Collaborator -> Add people
+
+
  + Các member sau khi đc add cần vào email để accept invite để đc join vào dự án
- + Member cần clone source về trước, r cd vào thư mục đó
+ + Member cần clone source code về trước, r cd vào thư mục đó
  
++ Tạo nhánh/branch của riêng mình để code, nhánh đc base
+trên nhánh chính của dự án.
+Nhánh chính là nhánh chứa code ngon nhất để demo cho KH
+Với repo này thì nhánh chính là nhánh main, các thành viên sẽ ko code trực tiếp trên nhánh chính
+Một số lệnh:
+git branch  -> show ra các nhánh đang có trong repo
+
+- Cần pull dữ liệu mới nhất về nhánh chính:
+git pull origin main 
+- Tạo nhánh mới base từ nhánh main và chuyển sang nhánh
+mới luôn:
+git checkout -b manhnv_feature
+- Code chức năng sau: tạo 1 file manhnv_test.txt, nội
+dung file là: Chào bạn, manhnv
+git add , git commit, git push
+Bắt buộc phải git push lên nhánh hiện tại của bạn
+
+- Tạo 1 yêu cầu Pull/Merge request để nhờ PM review code của bạn và tiến hành gộp/merge nhánh của bạn vào 
+nhánh main chính
