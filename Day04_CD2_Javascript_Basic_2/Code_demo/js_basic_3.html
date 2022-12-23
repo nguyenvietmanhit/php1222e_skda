@@ -1,0 +1,41 @@
+<!-- js_basic_3.html -->
+<script>
+	// 1 - Toán tử: tính toán các toán hạng xung quanh nó
+	// 3 + 5 = 8
+	// - Toán tử số học
+	// + Cộng + 
+	var number1 = 5;
+	var number2 = 2;
+	var res1 = number1 + number2;
+	// + Trừ - 
+	var res2 = number1 - number2;
+	// + Nhân * 
+	var res3 = number1 * number2;
+	// + Chia /
+	var res4 = number1 / number2; //2.5
+	// + Chia lấy dư  %
+	var res5 = number1 % number2; //1
+	// + Tăng giảm tích lũy 1 đơn vị: ++ -- 
+	var number = 5;
+	++number;
+	console.log(number); //6
+	// Dự đoán kqua của biểu thức sau:
+	
+	// Toán tử  ++ -- đứng sau thì phải đi qua biến đó
+	// thì mới bị thay đổi, ngược lại thì thay đổi luôn trước khi đi qua biến
+	var x = 5;
+	var result = x++ + x++; //12 13 11
+//             =  5  +  6 = 11
+	var y = 5;
+	var result1 = --y + y++; // 9 10 8 
+	//          =  4  +  4
+
+	var x = 5;
+	var sum = x++ * ++x + 2 * --x % 2; //25 35 30 32
+	//      =  5  *   7  + 2 *  6 % 2 = 35
+
+	var x = 5;
+	var sum = x * x - --x * 2 + x++ - x * ++x; // 1 -9 -649
+	//      = 5 * 5 -  4  * 2 + 4   - 5 *  6 = -9
+
+</script>

@@ -1,0 +1,157 @@
+<script>
+	//js_basic_2.html
+	// 1 - Biến:
+	// Hiển thị biến ra màn hình:
+	var fullname = 'manhnv';
+	document.write(fullname);
+	// Hàm chuyên debug trong JS
+	console.log(fullname);
+	// 2 - Hằng:
+	// + Là 1 dạng biến, tuy nhiên giá trị luôn luôn là cố định, ko thể gán lại
+	// + Khai báo: tên hằng nên viết hoa
+	const PI = 3.14;
+	const MAX_AGE = 130;
+	console.log(PI); //3.14
+	// PI = 123;
+	// 3 - Kiểu dữ liệu: phân loại dữ liệu để có cách xử lý khác nhau
+	// + number: là số = số nguyên và số thập phân
+	var number1 = 123;
+	var number2 = 1.23;
+	console.log(typeof number1); //number
+	// + string: chuỗi, đc bao bởi ký tự ' hoặc "
+	var str1 = 'Hello manhnv';
+	var str2 = "Hello 123";
+	var test = "123";
+	console.log(typeof str1); //string
+	// Cộng/nối chuỗi: +
+	var str3 = str1 + " def";
+	console.log(str3); //Hello manhnv def
+	// Hiển thị so le chuỗi
+	var str4 = "Hello 'manhnv'"; 
+	console.log(str4); //Hello 'manhnv'
+	// + boolean: chỉ có 2 giá trị duy nhất là true và false
+	// Với JS thì true và false bắt buộc viết thường
+	var is_male = true;
+	var is_female = false;
+	console.log(typeof is_male); //bool - boolean
+	// var test = True;
+	// -> Kiểu number, string, boolean gọi là kiểu dữ liệu nguyên thủy trong lập trình
+
+	// + undefined: kiểu ko xác định, xảy ra khi khai báo biến mà ko gán giá trị
+	var check;
+	console.log(typeof check); //undefined
+	// -> nên khai báo biến và gán giá trị luôn
+	var str = '';
+	var num = 0;
+	// + null: kiểu đặc biệt, khi thao tác với 1 đối tượng ko tồn tại, 1 giá trị duy nhất = null
+	var x = null;
+	// + array: kiểu mảng, có thể lưu nhiều giá trị tại 1 thời điểm, các giá trị có thể là bất cứ kiểu dữ liệu nào
+	var names = [123, 'str', true, null, []];
+	// Lưu tên của 500ae
+	var per1 = 'abc';
+	var per2 = 'def';
+
+	var names = ['abc', 'def']
+	console.log(typeof names); //array ? object
+	// Trong JS, mảng đc coi như 1 đối tượng
+	// + object: kiểu đối tượng
+	var person = {
+		name: 'manhv',
+		age: 32,
+		showName: function() {
+			console.log('Tên của bạn: ' + this.name)
+		}
+	}
+	// 4 - Hàm
+	// + Hàm là 1 tập các dòng code xử lý logic nào đó
+	// + Tính chất quan trọng nhất là sử dụng lại
+	// - Bài toán cộng 2 số ko viết hàm:
+	var number1 = 5;
+	var number2 = 7;
+	var sum = number1 + number2;
+	console.log(sum);
+
+	var number1 = 1;
+	var number2 = 2;
+	var sum = number1 + number2;
+	console.log(sum);
+
+	var number1 = 2;
+	var number2 = 3;
+	var sum = number1 + number2;
+	console.log(sum);
+	// -> thủ công và khó xử lý khi yêu cầu đầu vào thay đổi
+	// + Cú pháp khai báo
+	function showName() {
+		console.log('Hàm showName');
+	}
+	// + Gọi hàm
+	showName();
+	// Khai báo hàm cần sử dụng hàm, nếu ko thì xóa khai báo đi 
+	// + Phân loại hàm:
+	// - Hàm có sẵn bởi ngôn ngữ
+
+	// - Hàm tự định nghĩa: có các dạng sau:
+	// + Hàm không có tham số, ko có giá trị trả về
+	function showInfo() {
+		console.log('showInfo');
+	}
+	showInfo();
+	// + Hàm có tham số, ko có giá trị trả về:
+	// THam số là gì ? ko phải là giá trị cụ thể, đại diện cho 1 giá trị nào đó
+	// Viết hàm cộng hai số: cần xd  tham số
+	function total1(number1, number2) {
+		var total = number1 + number2;
+		console.log('Tổng = ' + total);
+	}
+	// Gọi hàm là lúc truyền giá trị thật cho các tham số
+	total1(1, 2); //3
+	// var x = x + 3;
+	total1(1, 3);
+	total1(4, 2);
+
+	// + Hàm có tham số, có giá trị trả về
+	// Cộng hai số:
+	// Xd tham số: 2 tham số
+	// Xd kiểu dữ liệu trả về của bài toán = giá trị trả về -> number
+	function total2(number1, number2) {
+		var sum = number1 + number2;
+		// return làm cho hàm trả về giá trị nào đó,
+		//và cũng giúp thoát khỏi hàm
+		return sum;
+		console.log('Text test?');
+	}
+	console.log('--------------');
+	var sum1 = total2(10, 20); //var sum1 = 30
+	sum1 = sum1 + 123
+	console.log(sum1); //30
+	// - Viết hàm hiển thị tên của 1 ai đó theo cách 3
+	// + Xd tham số: 1 tham số là tên của ai đó
+	// + Xd giá trị trả về: string
+	function showName2(fullname) {
+		var result = "Tên của bạn: " + fullname;
+		return result;
+	}
+	var res1 = showName2('manhnv');
+	console.log(res1);
+
+	// - Một số hàm có sẵn của JS
+	// + Hiển thị ra màn hình: document.write
+	// + Debug: console.log
+	// + Hiển thị hộp thoại cảnh báo:
+	// alert('Hello');
+	// + Lấy dữ liệu từ dạng popup: prompt
+	// var fullname = prompt('Nhập tên của bạn:');
+	// console.log(fullname);
+	// + Hiển thị hộp thoại dạng xác nhận: confirm
+	// var is_confirm = confirm('Bạn chắc chắn muốn xóa?')
+	// console.log(is_confirm);
+	// + Chuyển hướng
+	// window.location = 'https://google.vn';
+	// + Mở trình gửi mail mặc định trên HĐH:
+	// window.open('mailto:nguyenvietmanhit@gmail.com');
+	// + Tìm kiếm chuỗi trong chuỗi:
+	var email = 'nguyenvietmanhit@gmail.com';
+	var is_check = email.indexOf('@');
+	console.log(is_check);//> -1 là tìm thấy
+</script>
