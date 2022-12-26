@@ -1,0 +1,147 @@
+<!-- js_basic_3.html -->
+<script>
+	// 1 - Toán tử
+	// - Toán tử số học
+	// - Toán tử so sánh: so sánh toán hạng xung quanh => boolean
+	var number1 = 5;
+	var number2 = 2;
+	// + So sánh bằng:  == ===
+	// So sánh ==  chỉ so sánh về giá trị -> ép kiểu
+	var is_check = number1 == number2; 
+	console.log(is_check); //false
+	// So sánh  ===
+	var test1 = 3 == '3'; //true
+	var test2 = 3 === '3'; //false
+	console.log(test1, test2);
+	// -> === so sánh cả về kiểu dữ liệu, trong khi == thì ko
+	// + So sánh khác: != 
+	var test3 = (1 != 3); //true
+	// + So sánh lớn hơn >
+	var test4 = (1 > 5); //false
+	// + So sánh lớn hơn hoặc bằng: >=
+	var test5 = (5 >= 5); //true
+	// + So sánh nhỏ hơn: <
+	// + So sánh nhỏ hơn: <=
+
+	// - Toán tử logic: dùng trong thực tế sẽ có những trường hợp phải kết hợp nhiều điều kiện thì mới ra 1 quyết định -> trả về boolean
+	// + AND &&
+	// true && true = true
+	// true && false = false
+	// false && true = false
+	// false & false = false
+	var check = (1 > 0) && (1 <= 1); //true && true = true
+
+	// + OR ||
+	// true || true = true
+	// true || false = true
+	// false || true = true
+	// false || false = false
+	var check = (1 < 0) || (1 <= 1);//true
+	// + NOT  !
+	// !true = false
+	// !false = true
+	var check = !(1 < 0); //true
+	// - Toán tử gán: gán giá trị bên phải toán tử cho bên trái
+	// + Toán tử gán = 
+	var number = 5;
+	// + Cộng tích lũy: +=
+	number += 2; // number = number + 2 = 7
+	// + Trừ -=
+	number -= 4; // 3
+	// + Nhân *=
+	// + Chia /=
+	// + Chia lấy dư %=
+	// - CẦn chú ý toán tử gán = và toán tử so sánh ==
+
+	// 2 - Câu lệnh điều kiện: kiểm tra logic của 1 hành động, thực thi theo hành động đúng
+	// + If: có 3 từ khóa if elseif else
+	// a/ Chỉ dùng if: dùng cho 1 case duy nhất:
+	if (5 > 0) {
+		console.log('số 5 lớn hơn số 0');
+	}
+	// b/ Dùng if else: dùng cho 2 case:
+	if (5 >= 5) {
+		console.log('số 5 >= 5');
+	} else {
+		console.log('biểu thức trả về false');
+	}
+	// c/ Dùng if elsif else: >= 3 trường hợp
+	var point = 11;
+	if (point >= 8 && point <= 10) {
+		console.log('Giỏi');
+	} else if (point >= 6.5) {
+		console.log('Khá');
+	} else if (point >= 5) {
+		console.log('TB')
+	} else {
+		console.log('Yếu');
+	}
+
+	// + Switch case: dùng thay thế cho if khi >= 3 case
+	// Viêt với if:
+	var day = 3;
+	if (day == 0) {
+		console.log('CN');
+	} else if (day == 2) {
+		console.log('Thứ 2');
+	} else if (day == 3) {
+		console.log('Thứ 3');
+	} else {
+		console.log('Ko phải cn, t2, t3');
+	}
+	// Viết với switch case:
+	var day = 2;
+	switch (day) {
+		case 0: console.log('CN');break;
+		case 2: console.log('Thứ 2');break
+		case 3: console.log('Thứ 3');break;
+		default: console.log('Ko phải cn, t2, t3');
+	}
+	// -> switch chỉ dùng cho so sánh bằng
+
+	// 3 - Vòng lặp: for, while, do...while
+	// + Lặp đi lặp lại 1 hành động nào đó
+	// VD: log ra 500 lần đoạn text '500ae'
+	// - for: vòng lặp xác định trc số lần lặp
+	// Khởi tạo biến lặp
+	// Điều kiện lặp
+	// Thay đổi biến lặp ban đầu, để tới 1 thời điểm lặp nào đó sẽ làm cho điều kiện lặp bị sai -> thoát được vòng lặp
+	for (var i = 1; i <= 10; i++) {
+		console.log(i);
+	}
+	//111111
+	// -> cần tránh vòng lặp vô hạn
+	// - while: vòng lặp ko xác định
+	var j = 1;
+	while (j <= 10) {
+		console.log(j);
+		j++;
+	}
+	//12345678910
+	// - do...while: chạy ít nhất cho dù điều kiện bị sai ngay từ đầu
+	do {
+		console.log('test');
+	} while (2 < 0);
+
+	// 4 - Từ khóa break, continue trong vòng lặp
+	// + Dùng can thiệp vào quy trình lặp
+	// - break: thoát hẳn vòng lặp, thoát hẳn là ko chạy code phía sau break
+	for (var i = 1; i <= 10; i++) {
+		console.log(i);
+		if (i == 9 || i == 2) {
+			break;
+		}
+	}
+	// 12
+	// - continue: bỏ qua lần lặp hiện tại - ko chạy code phía sau continue, nhảy tới lần lặp kế tới
+	for (var i = 1; i <= 10; i++) {
+		console.log(i);
+		if (i >= 4) {
+			continue;
+		}
+	}
+	//12345
+	//1234
+	//12345678910
+
+</script>

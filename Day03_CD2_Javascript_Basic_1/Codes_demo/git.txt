@@ -54,7 +54,7 @@ git branch  -> show ra các nhánh đang có trong repo
 git pull origin main 
 - Tạo nhánh mới base từ nhánh main và chuyển sang nhánh
 mới luôn:
-git checkout -b manhnv_feature
+git checkout -b <tên-của-bạn>_feature
 - Code chức năng sau: tạo 1 file manhnv_test.txt, nội
 dung file là: Chào bạn, manhnv
 git add , git commit, git push
