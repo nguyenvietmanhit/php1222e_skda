@@ -1,0 +1,70 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Các thẻ liên quan đến form</title>
+</head>
+<body>
+	<!-- 
+	Form là gì - chứa các ô nhập liệu và 1 nút để gửi thông tin đi ?
+	form, input, textarea, select, option
+	- Bắt buộc phải khai báo thẻ form bao ngoài cho tất cả input bên trong, liên quan đến logic xử lý form về sau, còn về mặt hiển thị thì thẻ form ko có ý nghĩa
+	 -->
+	 <form method="POST" action="">
+	 	Nhập tên:
+	 	<!-- các thuộc tính của input:
+		- type: kiểu nhập liệu
+		- placeholder: text gợi ý cho các sử dụng input
+		- value: giá trị mặc định
+		- name: ko có tác dụng về mặt hiển thị, chỉ dùng khi xử lý form với JS hoặc PHP
+	 	 -->
+	 	<input type="text" placeholder="Hãy nhập tên..." value="123" 
+	 	name="fullname" />
+	 	<br />
+	 	Nhập mật khẩu:
+	 	<input type="password" />
+	 	<br />
+	 	Nhập tuổi:
+	 	<input type="number" />
+	 	<br />
+	 	Nhập email:
+	 	<input type="email" />
+	 	<br />
+	 	Chọn giới tính:
+	 	<!-- bắt buộc phải set chung name để chức năng radio hoạt động đúng -->
+	 	<input type="radio" name="gender" /> Nam
+	 	<input type="radio" name="gender" checked /> Nữ
+	 	<input type="radio" name="gender" /> Khác
+	 	<br />
+	 	Chọn nghề nghiệp:
+	 	<input type="checkbox" checked /> Dev
+	 	<input type="checkbox" /> Tester
+	 	<input type="checkbox" checked /> BA
+	 	<input type="checkbox" /> BrSE
+	 	<br />
+	 	Chọn 1 file:
+	 	<input type="file" />
+	 	<br />
+	 	Chọn nhiều file (giữ Ctrl khi chọn)
+	 	<input type="file" multiple />
+	 	<br />
+	 	Chọn quốc gia dưới dạng 1 danh sách dropdown:
+	 	<select>
+	 		<option>VN</option>
+	 		<option>KR</option>
+	 		<option>JP</option>
+	 	</select>
+	 	<br />
+	 	Nhập ghi chú:
+	 	<textarea rows="10" cols="30"></textarea>
+	 	<br />
+
+	 	<!-- Input đóng vai trò gửi thông tin đi - nút submit form - sau khi gửi thông tin trang sẽ bị tải lại  -->
+	 	<input type="submit" value="Gửi thông tin" />
+	 	<!-- Thiết lập lại các giá trị ban đầu cho các input form -->
+	 	<input type="reset" value="Reset form">
+	 </form>
+</body>
+</html>

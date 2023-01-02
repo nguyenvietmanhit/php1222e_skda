@@ -1,0 +1,96 @@
+<!-- basic_html_2.html -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Basic 2</title>
+	</head>
+	<body>
+		Hello World
+		<!--  img - Hiển thị hình ảnh - image - thẻ khuyết -->
+		<!-- 
+			- src: source - đường dẫn tới file ảnh, trong lập trình có 2 kiểu đường dẫn: 
+			+ Tuyệt đối/vật lý: C:/abc/def/page.png
+			+ Tương đối: lấy file khác làm mốc để so sánh đường dẫn -> ưu tiên sử dụng. Copy 1 file ảnh bất kỳ vào ngang hàng/cùng cấp với file basic_html_2.html
+		-->
+		<img src="avatar.png" width="50px" height="50px" 
+		title="Hiển thị khi rê chuột qua ảnh"
+		alt="Hiển thị text thay thế khi đường dẫn ảnh ko tồn tại"
+		/>
+		<!-- <img src="/avatar.png" /> -> là đường dẫn tuyệt đối -->
+		<!-- <img src="def/ghi/a.png" /> -->
+
+		<!-- table, tr, th, td - cấu trúc bảng - thẻ đầy đủ 
+			tr - table row
+			td - table data
+			th - table heading 
+		-->
+		<table border="1" cellspacing="0" cellpadding="8">
+			<tr>
+				<th>name</th>
+				<th>age</th>
+			</tr>
+			<tr>
+				<td>manhnv</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td>abc</td>
+				<td>11</td>
+			</tr>
+		</table>
+		<!-- Gộp cột và hàng trong bảng: 
+		gộp cột hay gộp hàng cần phải xóa đi các cột bị thừa
+		-->
+		<table border="1" cellspacing="0" cellpadding="8">
+			<tr>
+				<td colspan="2">A</td>
+				<!-- <td>B</td> -->
+				<td>C</td>
+			</tr>
+			<tr>
+				<td rowspan="2">D</td>
+				<td>E</td>
+				<td>F</td>
+			</tr>
+			<tr>
+				<td>G</td>
+				<td>H</td>
+				<!-- <td>I</td> -->
+			</tr>
+		</table>
+		<!-- ul - ol - li: danh sách - đầy đủ
+			- ul: danh sách ko có thứ tự - unorder list
+			- ol: danh sách có thứ tự - order list
+			- li: list item, là item trong 1 danh sách
+		 -->
+		 <ul>
+		 	<li>Li thứ nhất</li>
+		 	<li>Li thứ hai</li>
+		 	<li>Li thứ ba</li>
+		 </ul>
+		 <ol>
+		 	<li>Li thứ nhất</li>
+		 	<li>Li thứ hai</li>
+		 	<li>Li thứ ba</li>
+		 </ol>
+
+		 <!-- a - hiển thị 1 link - anchor - đầy đủ -->
+		 <a href="https://google.vn" target="_blank">Click để tới Google</a>
+		 <!-- button - hiển thị 1 nút - đầy đủ -->
+		 <button>Click để mua hàng</button>
+		 <!-- center - căn giữa nội dung bên trong - đầy đủ - chỉ dùng khi học về HTML -->
+		 <center>Nội dung bên trong đc căn giữa</center>
+		 <!-- iframe - nhúng 1 trang web khác vào trang hiện tại -->
+		 <!-- <iframe src="https://vnexpress.net" width="100%"></iframe> -->
+
+		 <!-- header, main, footer, section, nav, aside - các thẻ có ngữ nghĩa, thiên về cấu trúc trang, có tác dụng tốt với SEO thay vì thẻ div thông thường -> tự tìm hiểu -->
+		 <header>Đây là header</header>
+		 <main>Đây là nội dung chính của trang</main>
+		 <footer>Đây là footer</footer>
+		 <!-- thông thường: -->
+		 <div id="header">Đây là header</div>
+		 <div id="main">Đây là nội dung chính của trang</div>
+		 <div id="footer">Đây là footer</div>
+	</body>
+</html>
