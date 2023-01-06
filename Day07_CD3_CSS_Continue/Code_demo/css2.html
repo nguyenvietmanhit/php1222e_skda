@@ -1,0 +1,143 @@
+<!-- css2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Các thuộc tính CSS cơ bản</title>
+</head>
+<body>
+	<style type="text/css">
+		/*1 - Background*/
+		#p-bg {
+			/*Màu trộn:  mã hexa gồm 6 ký tự*/
+			/*background-color: #5f1515;*/
+			/*Dùng Devtool của Chrome để CSS trực tiếp*/
+			/*Chuột phải -> Inspect*/
+			/*Copy ảnh bất kỳ ngang hàng với file .html hiện tại */
+			/*background-color: #5f1515;
+		    background-image: url(avatar.png);*/
+		    height: 400px;
+		   /* background-repeat: no-repeat;
+		    background-position: center;*/
+		    /*CSS gộp: */
+		   /* background: #5f1515 url(avatar.png) no-repeat center;*/
+		    /*background: red;*/
+		}
+		/* 2 - Font */
+		.span-font {
+			/*Font family dựa vào Font đang có sẵn trên máy
+			C:/Windows/Fonts;
+			*/
+		    font-family: Arial;
+		    font-style: italic;
+		    font-weight: bold;
+		    font-size: 45px;
+		}
+		/*3 - Text*/
+		#h1-text {
+		    color: #9c3535;
+		    text-align: center;
+		    text-decoration: underline;
+		    text-transform: uppercase;
+		    text-shadow: 3px 3px 3px red;
+		    line-height: 40px;
+		}
+		/*4 - Border */
+		#p-border {
+		    /* border-color: blue; */
+		    /* border-style: solid; */
+		    /* border-width: 5px; */
+		    border-radius: 10px;
+		    /*Gộp*/
+		    border: 5px solid blue; 
+		}
+		/*5 - Margin: khoảng cách giữa các obj HTML liền kề nhau */
+		#div1 {
+			background: red;
+			width: 100px;
+			height: 100px;
+			/*margin-bottom: 20px;
+		    margin-left: 30px;
+		    margin-top: 10px;
+		    margin-right: 50px;*/
+		    /*Gộp: 
+			margin: top right bottom left;
+			margin: top-bottom left-right;
+			margin: top-bottom-left-right;
+		    */
+		    margin: 10px 50px 20px 30px;
+		}
+		#div2 {
+			background: yellow;
+			width: 150px;
+			height: 150px;
+		}
+		/*6 - Padding: khoảng cách tính từ viền đến nội dung bên trong*/
+		#p-padding {
+		    border: 1px solid red;
+		    padding-top: 30px;
+		    padding-left: 40px;
+		    padding-bottom: 50px;
+		    padding-right: 30px;
+		    /*Gộp giống margin*/
+		}
+		/*7 - Position:  di chuyển phần tử mà ko ảnh hưởng đến các phần tử quanh*/
+		/*fixed:  vị trí cố định khi cuộn trang*/
+		/*relative*/
+		/*absolute*/
+		#pos1 {
+		    background: blue;
+		    width: 50px;
+		    height: 50px;
+		    position: fixed;
+		    right: 0;
+		    top: 0;
+		}
+		#pos2 {
+			background: pink;
+			width: 70px;
+			height: 70px;
+			/*lấy chính bản thân obj để căn theo*/
+			position: relative;
+		    top: 20px;
+		    right: 0;
+		}
+
+		/**/
+		#parent {
+			background: blue;
+			width: 200px;height: 200px;
+			/*Cha là relative*/
+			position: relative;
+		}
+		#child {
+			background: pink;
+			width: 50px;height: 50px;
+			/*con là absolute*/
+			position: absolute;
+			top: 10px;
+		}
+	</style>
+	<div id="parent">
+		<div id="child">Div con</div>
+	</div>
+
+	<div id="pos1">Div 1 pos</div>
+	<div id="pos2">Div 2 pos</div>
+
+
+	<p id="p-padding">P padding</p>
+
+	<div id="div1">Div 1</div>
+	<div id="div2">Div 2</div>
+
+	<p id="p-border">P border</p>
+
+	<h1 id="h1-text">H1 text</h1>
+
+	<span class="span-font">Thẻ span</span>
+
+	<p id="p-bg">Thẻ p</p>
+</body>
+</html>

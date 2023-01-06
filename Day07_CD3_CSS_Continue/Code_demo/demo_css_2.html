@@ -1,0 +1,99 @@
+<!-- demo_css_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo CSS phần 2</title>
+</head>
+<body>
+
+<style type="text/css">
+	h1 {
+		color: red;
+	}
+
+	/*1 - Selector:  là obj chịu tác động bởi CSS */
+	/*+ Theo tên thẻ: */
+	p {
+		background: yellow;
+	}
+	/*+ Theo thuộc tính id và class của thẻ: */
+	/*id*/
+	#a1 {
+		color: green;
+	}
+	/*class*/
+	.a1-class {
+		color: blue;
+	}
+	/*id duy nhất, class dùng chung*/
+
+	/*+ Theo cấp: dùng dấu cách*/
+	div i {
+		color: red;
+	}
+	/*+ Theo thuộc tính thẻ:  */
+	input[type=text] {
+		background: blue;
+	}
+	/* + Theo trạng thái thẻ: hover, vị trí */
+	#h2-hover:hover {
+		color:  red;
+	}
+	/*vị trí chỉ áp dụng cho cấu trúc cha con trực tiếp*/
+	ul li:first-child {
+		background: red;
+	}
+	ul li:last-child {
+		background: pink;
+	}
+	ul li:nth-child(2) {
+		background: green;
+	}
+	ul li:nth-child(3) {
+		background: blue;
+	}
+	ul li:nth-child(4) {
+		background: pink;
+	}
+	/*before after*/
+	#a2:before {
+		content: "Text trước";
+	}
+	#a2:after {
+		content: "Text sau";
+	}
+ </style>
+
+ 	<a id="a2">Thẻ a2</a>
+ 	<ul>
+ 		<li>Li 1</li>
+ 		<li>Li 2</li>
+ 		<li>Li 3</li>
+ 		<li>Li 4</li>
+ 		<li>Li 5</li>
+ 	</ul>
+
+ 	<h2 id="h2-hover">Hover để đổi màu text</h2>
+
+ 	<input type="text">
+ 	<input type="email">
+ 	<input type="number">
+
+ 	<i>In nghiêng</i>
+ 	<div>
+ 		<i>Thẻ i trong div</i>
+ 	</div>
+
+ 	<a class="a1-class">Thẻ a1 class</a>
+ 	<span class="a1-class sp1 sp2">Thẻ span</span>
+	<a id="a1">Thẻ a1</a>
+	<a>Thẻ a</a>
+
+	<p>Thẻ p1</p>
+	<p>Thẻ p2</p>
+
+	<h1>Thẻ h1</h1>
+</body>
+</html>
