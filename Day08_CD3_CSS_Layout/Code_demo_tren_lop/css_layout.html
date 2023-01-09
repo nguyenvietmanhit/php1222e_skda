@@ -1,0 +1,117 @@
+<!-- css_layout.html 
+Dựng layout với CSS
+1 - Layout web là gì? là bố cục trang web dưới dạng hàng và cột
+2 - Kỹ thuật dựng layout web với CSS:
++ CẤu trúc table: ko nên dùng vì cấu trúc HTML phức tạp và ko linh hoạt khi responsive
++ CSS position: ko nên dùng vì css phức tạp
++ CSS Float: có thể dùng nhưng ko ưu tiên
++ CSS display: flex -> ưu tiên nhất vì dễ tạo cấu trúc và responsive linh hoạt
++ CSS display: grid -> có thể dùng tuy nhiên css hơi phức tạp
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout CSS</title>
+</head>
+<body>
+	<style type="text/css">
+		/*Hiện tại ko thể dựng đc layout 1 hàng 3 cột từ 3 thẻ div này -> chuyển về dạng table hoặc sử dụng kỹ thuật CSS ở trên để dựng layout*/
+		#div1 {background: red;}
+		#div2 {background: blue;}
+		#div3 {background: green;}
+		#span1 {background: yellow;}
+		#a1 {background: brown;}
+		/*- Thành phần inline và block 
+		+ inline: chỉ chiếm vừa đủ nội dung nên có thể đứng ngang hàng đc
+		+ block:  chiếm hết 1 hàng nên ko thể đứng chung hàng với các thành phần khác;
+		- Một số thẻ block mặc định:  div, h, p, ul, ol ..
+		- Một số thẻ inline mặc định:  span a u i b ...;
+		- Để check cần set màu nền
+		- Có thể chuyển đổi linh hoạt kiểu hiển thị dựa vào css display
+		*/
+		/*Thay vì dùng inline, nên dùng inline-block*/
+		li {
+		    display: inline-block;
+		    margin-right: 15px;
+		    margin-top: 10px;
+		    margin-left: 30px;
+		    margin-bottom: 10px;
+		}
+		/*Tạo 1 cấu trúc layout 1 hàng 3 cột bằng nhau*/
+		/* - Dựng layout với CSS float */
+		/* Cần css float cho tất cả cột, sau đó set width % tương ứng */
+		#float1 {
+			background: red;
+    	    float: left;
+    		width: 33.33%;
+		}
+		#float2 {
+			background: yellow;
+			float: left;
+    		width: 33.33%;
+		}
+		#float3 {
+			background: blue;
+			float: left;
+    		width: 33.33%;
+		}
+		/*Float hay gây vỡ giao diện với phần tử ngay phía sau phần tử đang bị float cuối cùng*/
+		/*Để fix cần tạo thêm 1 HTML, vào thêm thuộc tính CSS sau để bỏ tính chất của float đi:  clear:  both*/
+		/*Đảm bảo width trên 1 hàng tối đa 100%*/
+		.clear {clear: both;}
+
+		/* - Dựng layout với Flex: kỹ thuật ưu tiên nhất khi dựng layout */
+		/*Bắt buộc phải tạo 1 cấu trúc HTML dạng cha con*/
+		/*Áp dụng display flex cho thành phần cha, sau đó set width % cho các thành phần con */
+		/*Flex mặc định luôn luôn giữ các cột bên trong trên 1 hàng cho dù tổng width > 100%*/
+		/*Flex tiết kiệm công sức fix giao diện của float*/
+		.row {
+		    display: flex;
+		}
+		.col1 {
+			background: green;
+			width: 33.33%;
+		}
+		.col2 {
+			background: blue;
+			width: 33.33%;
+		}
+		.col3 {
+			background: pink;
+			width: 33.33%;
+		}
+	</style>
+	<div class="row">
+		<div class="col1">Div 1 flex</div>
+		<div class="col2">Div 2 flex</div>
+		<div class="col3">Div 3 flex</div>
+	</div>
+
+
+
+	<div id="float1">Div float 1</div>
+	<div id="float2">Div float 2</div>
+	<div id="float3">Div float 3</div>
+	<div class="clear"></div>
+	<ul>
+		<li>
+			<a href="#">Link 1</a>
+		</li>
+		<li>
+			<a href="#">Link 2</a>
+		</li>
+		<li>
+			<a href="#">Link 3</a>
+		</li>
+	</ul>
+
+
+	<div id="div1">Div 1</div>
+	<div id="div2">Div 2</div>
+	<div id="div3">Div 3</div>
+	<span id="span1">Thẻ span</span>
+	<a id="a1">Thẻ a</a>
+</body>
+</html>
