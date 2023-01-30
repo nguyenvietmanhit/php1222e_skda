@@ -1,0 +1,33 @@
+note.txt
+Cắt giao diện từ file thiết kế (PS, AI)
+- Chuyển đổi sang HTML CSS từ file thiết kế
+- Đảm bảo nội dung giống hết file thiết kế
+Các bước cắt giao diện:
+1 - Tạo cấu trúc file/thư mục
+psd_test /
+         /images: lưu ảnh lấy từ file design
+         /css: lưu file .css
+             /style.css
+         /js: lưu các file .js
+             /script.js
+         /fonts: lưu file font lấy từ file design
+         index.html: file HTML chính        
+2 - Cắt ảnh từ file design
+ Alt Chuột giữa -> zoom
+ Giữ Dấu cách + Di chuột để di chuyển
+Ctrl Alt Z -> back lại nhiều step trước
+
+ Ảnh ? là những thứ mà ko thể dùng HTML CSs để tạo ra đc
+ - Cắt ảnh thì dùng tool Crop (C), cần xác định vùng chọn
+ Sau khi C thì Enter 2 lần, vào Menu File -> Save As -> lưu
+ vào thư mục images
+ 3 - Lấy font từ file design
+ - Sử dụng Text (T) để xác định font
+ Myriad Pro, 
+ Pacifico do hệ thống chưa có cần download thủ công về:
+ searcr gg: pacifico font download
+ - Cần lưu file .ttf vào thư mục fonts đã tạo
+ - Import sẵn font này vào file style.css
+ 4 - Code HTML CSS: code càng giống file design càng tốt:
+ giống tuyệt đối font, text, ảnh, màu sắc
+ Tương đối là khoảng cách giữa các phần tử

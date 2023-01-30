@@ -1,16 +1,23 @@
-/*psd_demo/css/style.css*/
-/*Nhúng font: */
+/*psd_test/style.css*/
+/*Nhúng file font: */
 @font-face {
-	src: url(../fonts/Pacifico-Regular.ttf);
-	font-family: Pacifico-Regular;
+    font-family: Pacifico-Regular;
+    src: url(../fonts/Pacifico-Regular.ttf);
 }
+
 .header {
     background: #2F2F2F;
-    padding: 10px 0;
+    padding: 30px 0;
 }
+
 .container {
     max-width: 70%;
     margin: auto;
+}
+
+body {
+    font-family: Myriad Pro;
+    font-size: 14px;
 }
 
 .row {
@@ -18,74 +25,22 @@
 }
 
 .logo {
-    color: #fff;
-    font-size: 40px;
+    color: white;
+    font-size: 35px;
     font-family: Pacifico-Regular;
     width: 50%;
 }
 
-.menu {
-    width: 50%;
-    /*Căn cột hiện tại theo chiều dọc so với cột khác*/
-    align-self: center;
-}
-
-.menu li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-body {
-	 font-family: Myriad Pro;
-}
-
-.main-top {
-    background: #F1F1F1;
-    padding: 40px 0;
-}
-
-.article {
-    width: 40%;
-}
-
-.learn-more {
-    background: #F99640;
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.main-image {
-    width: 60%;
-}
-
-.main-img {
-    max-width: 100%;
-}
-
-.main-middle {
-    padding: 40px 0;
-}
-
-.middle-item {
+.item {
     width: 33.33%;
     margin: 0 20px;
 }
 
-.rectangle {
-    height: 50px;
-    background: #000;
+.black {
+    background: black;
+    height: 200px;
 }
 
 .main-middle .row {
-	/*Kỹ thuật fix thẳng lề cho các cột bên trong flex*/
-	margin: 0 -20px;
+    margin: 0 -20px;
 }
