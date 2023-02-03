@@ -1,4 +1,4 @@
-/*psd_test/style.css*/
+psd_test/style.css*/
 /*Nhúng file font: */
 @font-face {
     font-family: Pacifico-Regular;
@@ -43,4 +43,29 @@ body {
 
 .main-middle .row {
     margin: 0 -20px;
+}
+
+/*Cần ktra thẻ meta name=viewport đã có trong head
+của trang HTML hay chưa*/
+
+/*Ipad*/
+
+/*Mobile*/
+/*Nếu có design riêng cho Mobile, thì cần cắt giao diện
+ theo đúng design đó*/
+ /*Thông thường giao diện trên Mobile đc responsive từ PC, 
+ phụ thuộc vào mắt thẩm mỹ của từng coder*/
+ 
+@media(max-width:  767px) {
+    .main-img {
+        max-width: 100%;
+    }
+
+    .menu {
+    display: none;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
 }

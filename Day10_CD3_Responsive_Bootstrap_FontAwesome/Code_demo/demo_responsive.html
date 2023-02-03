@@ -1,0 +1,101 @@
+<!-- demo_responsive.html
+- Thiết kế web responsive
++ Web Resposive là web hiển thị tương thích với nhiều thiết bị, ko 
+xuất hiện thanh cuộn ngang 
++ Responsive là xu hướng hiện nay vì có nhiều thiết bị, hỗ trợ tốt hơn cho SEO web
++ 3 thiết bị chính: PC/Laptop, Ipad/Tablet/ Mobile
++ Kỹ thuật Responsive: sử dụng CSS
++ VD: đổi màu text trên 3 thiết bị
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Bắt buộc phải có với web responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo responsive</title>
+	<style type="text/css">
+		/*Code ăn với mọi thiết bị*/
+		/*
+		- Để code responsive, cần code CSS theo đúng thứ tự sau: 
+		PC -> Ipad -> Mobile, để ghi đè
+		- Các màn hình dựa vào width để xác định:
+		PC: min-width:  1024px;
+		Ipad: min-width:  768px, max-width: 1023px;
+		Mobile:  max-width:  767px;
+		*/
+
+		/*Mặc định code là cho PC */
+		.test {
+			color: red;
+		}
+		/*Ipad*/
+		@media(min-width:  768px) and (max-width:  1023px) {
+			.test {
+				color: green;
+			}
+		}
+		/*Mobile*/
+		@media(max-width:  767px) {
+			.test {
+				color: yellow;
+			}
+		}
+		/*Dùng công cụ giả lập từ Inspect*/
+		/*Xu hướng code Resposive coi Ipad và PC là 1*/
+
+		/*2 - Responsive liên quan đến layout: flex
+		Trên PC layout 1 hàng 4 cột bằng nhau
+		Trên Ipad 2 hàng mỗi hàng 2 cột bằng nhau
+		Trên Mobile 4 hàng, mỗi hàng 1 cột duy nhất
+		*/
+		.col1 {
+			background: red;
+		}
+		.col2 {
+			background: green;
+		}
+		.col3 {
+			background: blue;
+		}
+		.col4 {
+			background: pink;
+		}
+		.row {
+			display: flex;
+		}
+		.col1, .col2, .col3, .col4 {
+			width: 25%;
+		}
+		/*Ipad:  2 hàng mỗi hàng 2 cột bằng nhau*/
+		@media(min-width: 768px) and (max-width: 1023px) {
+			/*Cần bỏ đi tính chất mặc định của flex (luôn giữ các thành phần con trên 1 hàng ko quan trọng width)*/
+			.row {
+				flex-wrap: wrap;
+			}
+			.col1, .col2, .col3, .col4 {
+				width: 50%;
+			}
+		}
+		/*Mobile:  4 hàng mỗi hàng 1 cột*/
+		@media(max-width:  767px) {
+			.row {
+				flex-wrap: wrap;
+			}
+			.col1, .col2, .col3, .col4 {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col1">Thành phần 1</div>
+		<div class="col2">Thành phần 2</div>
+		<div class="col3">Thành phần 3</div>
+		<div class="col4">Thành phần 4</div>
+	</div>
+
+	<h2 class="test">Thẻ h2</h2>
+</body>
+</html>
