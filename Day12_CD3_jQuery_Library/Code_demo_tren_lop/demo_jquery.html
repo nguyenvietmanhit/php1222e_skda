@@ -1,0 +1,79 @@
+<!-- demo_jquery.html
+1 - Thư viện jQuery
++ Là thư viện hỗ trợ tương tác với HTML đơn giản hơn
+so với dùng JS thuần
++ Cài đặt:
+- Thủ công:
+- Link CDN 
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Demo jQuery</title>
+ 	<!-- Nhúng link jQuery cdn - Content Delivery Network -->
+ 	<!-- Nguyên tắc chung khi sử dụng 1 thư viện bất kỳ: ko đc chỉnh sửa source code của nó, nếu muốn sửa thì phải tạo module riêng base core của nó -->
+ 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+ </head>
+ <body>
+ 	<script>
+ 		// Ký tự $ là đặc trưng nhất của jQuery
+ 		// Trang web khi load hết HTML CSS -> sẵn sàng , thì
+ 		//code JS mới đc chạy -> sk load window
+ 		$(document).ready(function() {
+ 			// alert('test jquery');
+ 			// 2 - Học jQuery ntn ? học các module của jQuery
+ 			// Selector, DOM - Document Object Model, Attribute,
+ 			// Event, Effect, Ajax - Asynchonronous Javascript and XML -> tạo ra các chức năng ko đồng bộ
+ 		})
+ 		// property : thuộc tính của kiểu dữ liệu object
+ 		// Attribute : thuộc tính của object HTML
+ 		// - Xử lý form đơn giản sử dụng jQuery
+ 	</script>
+
+ 	<form id="form-login" method="post" action="">
+ 		<label for="username">Username:</label>
+ 		<input type="text" id="username">
+ 		<br>
+
+ 		Password:
+ 		<input type="password" id="password">
+ 		<br>
+ 		<input type="submit" value="Login">
+ 	</form>
+ 	<h3 style="color: red" id="error"></h3>
+ 	<h3 style="color: green" id="result"></h3>
+
+ 	<script>
+ 		// Sử dụng jQuery
+ 		$(document).ready(function() {
+ 			// Bắt sự kiện submit của form
+ 			// Sử dụng module Selector của jQuery để lấy obj muốn tương tác
+ 			// var obj_form = document.querySelector('#form-login');
+ 			var obj_form = $('#form-login');
+ 			console.log(obj_form);
+ 			// Obj của jQuery khác hoàn toàn so với obj của JS thuần
+ 			// -> 2 obj này sẽ dùng các hàm khác nhau
+ 			// Gắn sự kiện cho obj trên -> module Event
+ 			obj_form.submit(function() {
+ 				// alert('submit')
+ 				// Khai báo biến chứa lỗi và kết quả
+ 				var error = '';
+ 				var result = '';
+ 				// Lấy giá trị của 2 input: dùng module Attribute
+ 				// riêng với input sẽ dụng hàm val
+ 				var username = $('#username').val();
+ 				var password = $('#password').val();
+ 				// Validate:
+ 				if (username == '' || password == '') {
+ 					error = 'Phải nhập';
+ 				}
+
+ 			})
+
+ 		})
+ 	</script>
+
+ </body>
+ </html>
