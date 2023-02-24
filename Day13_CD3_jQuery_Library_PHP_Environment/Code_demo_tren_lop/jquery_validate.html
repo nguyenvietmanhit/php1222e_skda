@@ -1,0 +1,59 @@
+<!-- jquery_validate.html 
+- Thư viện jQuery Validate
++ Cung cấp tính năng validate theo kiểu realtime
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thư viện jQuery Validate</title>
+	<!-- Tích hợp jQuery đầu tiên -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<!-- Thư viện này validate theo thuộc tính name của input -->
+	<form id="form-info">
+		Nhập tên:
+		<input type="text" name="fullname">
+		<br>
+		Nhập tuổi:
+		<input type="text" name="age">
+		<br>
+		Nhập email:
+		<input type="text" name="email">
+		<br>
+		<input type="submit" value="Check validate">
+	</form>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var obj_validate = {
+				rules: {
+					fullname: {
+						required: true,
+						minlength: 3
+					},
+					age: {
+						required: true,
+						number: true,
+						max: 127
+					},
+					email: {
+						email: true
+					}
+				},
+				messages: {
+					fullname: {
+						required: 'Phải nhập tên',
+						minlength: 'Tên >=  3 ký tự'
+					}
+				}
+			};
+			// Gọi thư viện jquery validate trên obj form
+			$('#form-info').validate(obj_validate);
+		})
+	</script>
+</body>
+</html>
