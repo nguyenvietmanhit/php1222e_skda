@@ -1,0 +1,59 @@
+1 - PHPStorm
++ IDE code PHP phổ biến nhất hiện nay
++ Mất phí, crack, tham khảo file
+Cai_dat_IDE_PHPStorm_2021.1.x.docx
++ Khá nặng, tùy sở thích cá nhân thì có thể
+dùng Visual Code, Sublime .... thay thế
++ Một số phím tắt, tham khảo file
+Phim_tat_can_ban_PHPStorm.html
+2 - XAMPP:
+Bật XAMPP,start Apache
+http://localhost
+3 - Tổng quan về PHP
+- Môi trường phát triển Web với PHP: để code PHP
+viết ra chạy đc trên trình duyệt, thì bắt buộc phải
+cài môi trường phát triển
++ Bao gồm 3 thành phần:
+Webserver: nơi lưu trữ Website, Apache và Nginx
+PHP Engine: đọc code PHP
+Database: là cơ sở dữ liệu, lưu trữ dữ liệu -> website
+động
+Web động: thay đổi đc dữ liệu thông qua giao diện
+quản trị (HTML CSS JS + PHP ... )
+Web tĩnh: web ko lưu lại dữ liệu (HTML CSS JS)
+-> cài thủ công 3 thành phần khá phức tạp
+-> XAMPP, chỉ dùng khi học tập, thực tế ưu tiên dùng
+Docker , Laravel -> Laradock
+
++ Mô hình client - server
+Với lập trình Web: client = trình duyệt, server = PHP
++ PHP là gì
+- Hypertext Preprocessor:
+- Là ngôn ngữ lập trình backend chuyên dùng để xây
+dựng Website
+Thông qua API thì PHP hoàn toàn có thể dựng các ứng
+dụng game, mobile, desktop
+- Có nhiều version, 8.x
+- Cộng đồng hỗ trợ lớn, thư viện phong phú
+- PHP đc viết trong file có đuôi file là .php
+
++ Cách chạy code PHP với phần mềm XAMPP:
+- Source code PHP viết ra bắt buộc phải đặt trong
+thư mục cài XAMPP: C:/xampp/htdocs
+- Bắt buộc phải mở Control Panel XAMPP, start Module
+Apache
+VD:
+Dùng PHPStorm tạo Project mới như sau:
+Mở PHPSTorm -> Menu File -> New Project
+-> Location: C:\xampp\htdocs\php1222e_demo
+
+
+
+
+
+
+
+
+- Setting fontsize: File -> Settings -> Editor - Font
+- Setting theme: File -> Settings -> Appearance and
+Behavior -> Appearance -> Theme
