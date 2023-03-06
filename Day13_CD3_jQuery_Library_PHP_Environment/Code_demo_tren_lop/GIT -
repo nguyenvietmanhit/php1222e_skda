@@ -1,0 +1,14 @@
+GIT -
++ Bài toán:
+Code nhóm: 
+GIT -> gộp/merge code tự động
+- Học GIT:
++ Cách tạo 1 repository 
++ Command line cơ bản của GIT
+ + cd Documents -> di chuyển vào thư mục Documents từ đường dẫn
+hiện tại
++ ls -la -> liệt kê file/thư mục của đường dẫn hiện tại
++ cd .. -> lên 1 cấp
++ cd \ -> di chuyển về ổ gốc
++ D: -> chuyển ổ D
+mkdir manhnv -> tạo thư mục
