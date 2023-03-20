@@ -1,0 +1,81 @@
+<!-- demo.html 
+- HTML
++ Là 1 ngôn ngữ dùng để cấu trúc trang web
++ Là ngôn ngữ Frontend, HTML CSS Javascript
++ Hyper Text Markup Language
++ HTMLL sẽ kết hợp với CSS và JS để xây dựng 1 trang web hoàn chỉnh về mặt giao diện
++ HTML -> CSS -> JS
+- Cấu trúc trang HTML cơ bản:
++ HTML đc lưu tại file .html hoặc .htm
++ Cú pháp comment code, Ctrl /
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tiêu đề trang</title>
+	</head>
+
+	<body>
+		Hello manhnv
+		<!-- h1 - h6 - thẻ đầy đủ - hiển thị tiêu đề như tên sp, tên tin tức - heading -->
+		<h1>Thẻ h1</h1>
+		<h2>Thẻ h2</h2>
+		<h3>Thẻ h3</h3>
+		<h4>Thẻ h4</h4>
+		<h5>Thẻ h5</h5>
+		<h6>Thẻ h6</h6>
+		<!-- p - đầy đủ, hiển thị 1 đoạn văn
+		- paragraph -->
+		<p>Thẻ p1</p>
+		<p>Thẻ p2</p>
+		<!-- br - khuyết - xuống dòng trong HTML - break -->
+		Chào bạn, <br>
+		tôi là manhnv
+		<!-- hr - khuyết - hiển thị đường kẻ ngang - horizontal -->
+		<hr>
+		<!-- i - đầy đủ - in nghiêng - italic -->
+		<i>In nghiêng</i>
+		<b>In đậm</b>
+		<u>Gạch chân</u>
+		<!-- div - đầy đủ - xây dựng cấu trúc trang, chỉ có tác dụng khi kết hợp với CSS - division -->
+		<div>Thẻ div</div>
+		Text bình thường
+		<div>
+			<b>B</b>
+			<u>U</u>
+		</div>
+		<!-- span - đầy đủ - css cho các thành phần text ngang hàng -->
+		Tôi là <span>manhnv</span>
+		<!-- img - khuyết - hiển thị hình ảnh - image, cbi 1 file ảnh nằm cùng cấp với file .html hiện tại
+		Trong lập trình có 2 kiểu đường dẫn:
+		- Vật lý/tuyệt đối: C:/abc/def/bt1.jpg
+		- Tương đối: ưu tiên dùng
+		 -->
+		<img src="bt1.jpg" 
+		title="Hiển thị khi rê chuột qua ảnh"
+		alt="Nội dung thay thế khi ảnh ko tồn tại"
+		width="100px" 
+		height="100px" 
+		>
+		<!-- table, tr, th, td - cấu trúc bảng
+		tr - table row
+		th - table heading
+		td - table data
+		 -->
+		<table border="1" cellspacing="0" cellpadding="8">
+			<tr>
+				<th>Tên</th>
+				<th>Tuổi</th>
+			</tr>
+			<tr>
+				<td rowspan="2">manhnv</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td>nhungdt</td>
+				<!-- <td>30</td> -->
+			</tr>
+		</table>
+	</body>
+</html>
