@@ -126,7 +126,12 @@ $obj = new User6();
 // + public: truy cập đc từ mọi nơi
 
 
-
+// Thi thứ 6 này , ngày 14/4
+// - Đc nghỉ, làm bài thi tại nhà
+// - Đề sẽ đc gửi sau
+// - Nội dung thi là chức năng CRUD
+// - Tham khảo các đề thi tại Day25/Code_demo/de_thi_backend_cd4.rar
+// Từ thứ 2 tuần tới học 1 tuần 1 buổi vào thứ 2
 
 
 
