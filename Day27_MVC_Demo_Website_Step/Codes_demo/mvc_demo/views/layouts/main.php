@@ -10,6 +10,19 @@ của class controller cha tương ứng đang đc set ở class controller con
         <script src="assets/js/script.js"></script>
     </head>
     <body>
+<!-- Hiển thị các lỗi, session lỗi, session thành công tại file
+layout-->
+        <h3 style="color: red"><?php echo $this->error; ?></h3>
+        <?php
+        if (isset($_SESSION['success'])) {
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
+		if (isset($_SESSION['error'])) {
+			echo $_SESSION['error'];
+			unset($_SESSION['error']);
+		}
+        ?>
         <div class="header">Đây là header</div>
         <div class="main"><?php echo $this->content; ?></div>
         <div class="footer">Đây là footer</div>
