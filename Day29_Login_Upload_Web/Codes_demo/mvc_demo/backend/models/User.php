@@ -17,4 +17,14 @@ class User extends Model {
 		// B4:
 		return $obj_insert->execute($inserts);
 	}
+
+	public function getUserByUsername($username) {
+		$sql_select_one = "SELECT * FROM users WHERE username=:username";
+		$obj_select_one = $this->connection->prepare($sql_select_one);
+		$selects = [
+			':username' => $username
+		];
+		$obj_select_one->execute($selects);
+		return $obj_select_one->fetch(PDO::FETCH_ASSOC);
+	}
 }

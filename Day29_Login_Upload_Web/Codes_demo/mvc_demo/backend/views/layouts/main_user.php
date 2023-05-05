@@ -67,16 +67,19 @@
 <!-- AdminLTE App -->
 <script src="assets/js/adminlte.min.js"></script>
 <!--CKEditor -->
-<!--<script src="assets/ckeditor/ckeditor.js"></script>-->
-
+<!--Nhúng file thư viện CKEditor-->
+<script src="assets/ckeditor/ckeditor.js"></script>
 <script>
     $(document).ready(function() {
-        // CKEDITOR.replace('description', {
-        //   //đường dẫn đến file ckfinder.html của ckfinder
-        //   filebrowserBrowseUrl: 'assets/ckfinder/ckfinder.html',
-        //   //đường dẫn đến file connector.php của ckfinder
-        //   filebrowserUploadUrl: 'assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
-        // });
+        // Tích hợp CKFinder và CKEditor
+        CKEDITOR.replace('detail', {
+          //đường dẫn đến file ckfinder.html của ckfinder
+          filebrowserBrowseUrl: 'assets/ckfinder_php.8.x/ckfinder.html',
+          //đường dẫn đến file connector.php của ckfinder
+          filebrowserUploadUrl: 'assets/ckfinder_php.8.x/core/connector/php/connector.php?command=QuickUpload&type=Files'
+        });
+
+
     })
 </script>
 
