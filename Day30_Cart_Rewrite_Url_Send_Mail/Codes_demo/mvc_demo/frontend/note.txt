@@ -1,0 +1,22 @@
+Day30/ Chạy frontend
+     / Chạy cả backend: Tạo tài khoản và đăng nhập tài khoản
+     Vào menu Quản lý danh mục thêm 1 danh mục ở trạng thái Active
+     Vào menu Quản lý sản phẩm thêm 3 4 sản phẩm ở trạng thái Active
+- Chức năng giỏ hàng: lưu tạm thời các sản phẩm dự định mua trên
+web
+- Lưu giỏ hàng bằng gì ? ưu tiên dùng session
+SESSION
+COOKIE
+DATABASE
+FILE
+...
+- Cấu trúc giỏ hàng sẽ lưu
+$_SESSION['cart'] = [
+    4 => [
+        'name' => 'Iphone X',
+        'price' => 3000,
+        'avatar' => 'x.png',
+        'quantity' => 3
+    ]
+]
+- Nên sử dụng kỹ thuật Ajax khi làm giỏ hàng
